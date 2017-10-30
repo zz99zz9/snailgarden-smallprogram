@@ -1,0 +1,83 @@
+.swiper-slide {
+
+    overflow: auto;
+}
+
+/*封面*/
+.logo{width:50%;margin-top:25%;}
+.down{width:10%;display:block;margin-left:45%;margin-top:70%;opacity: 0.8;}
+.section01{background-image:url('https://snailgarden.shxgwl.com/xgwl/img/s1bg.png') !important;}
+/*花园特征*/
+.page1img{width:80%;border-radius:15px;box-shadow: 2px 1pt 1pc rgba(0,0,0,0.3);margin-top:15px;}
+/*花园泥作*/
+.section03{background-image:url("https://snailgarden.shxgwl.com/xgwl/img/page2.jpg") !important;position:relative;}
+.section-maintitle2{color:#fff;writing-mode:tb-rl;position:absolute;top:10%;left:40%;font-size:1.5em;letter-spacing:0.2em;}
+.section-subtitle2{color:#fff;writing-mode:tb-rl;display:block;height:60%;top:10%;position:absolute;left:8%;border-right:1px solid #fff;padding-right:15px;text-align:left;letter-spacing:0.2em;}
+/*花园木作*/
+.section04{background-image:url("https://snailgarden.shxgwl.com/xgwl/img/page3.jpg") !important;position:relative;}
+.section-maintitle3{color:#000;writing-mode:tb-rl;position:absolute;top:10%;right:10%;font-size:1.5em;letter-spacing:0.2em;}
+.section-subtitle3{color:#000;writing-mode:tb-rl;display:block;height:60%;top:10%;position:absolute;right:27%;border-right:1px solid #000;padding-right:15px;text-align:left;letter-spacing:0.2em;}
+/*联系我们*/
+.section11{padding-top:90px;}
+.eq{width:150px;display:block;margin:0 auto;background:#fff;padding:10px;color:#999;text-align:center;margin-bottom:50px;}
+.eq .tit{letter-spacing:0.3em;text-align:center;}
+.eq .image{width:100%;}
+.tel{background:#fff;padding:8px 20px;border-radius:20px;color:#7cbfb0;font-size:1.5em;margin-top:30px;}
+.h20{height:20px;display:block;}
+/*坚列内容*/
+.slide-image{width:80%;border-radius:10px;box-shadow: 2px 1pt 1pc rgba(0,0,0,0.3);background:#fff;padding:10px;display:block;margin-left:7.5%;}
+.slide-image .image{width:95%;border:1px solid #999;height:230px;padding:5px;}
+.slide-image .tit{display:block;}
+.slide-image2{width:80%;box-shadow: 2px 1pt 1pc rgba(0,0,0,0.3);background:#fff;padding:10px;display:block;margin-left:7.5%;}
+.slide-image2 .image{width:100%;height:230px;}
+.slide-image2 .tit{display:block;}
+.swiper{margin-top:10%;height:330px;}
+.wx-swiper-item{height:360px !important;}
+.wx-swiper-dots{margin-bottom:0%;}
+
+/*通用*/
+.titline{width:34px;height:3px;margin:0 auto;}
+ 
+.container-fill{
+	height: 100%;
+	overflow: hidden;
+}
+.scroll-fullpage{
+	height: 100%;
+	transition: all 0.3s;
+}
+.section{
+	height: 100%;
+  background-image:url('https://snailgarden.shxgwl.com/xgwl/img/bg.jpg');background-size:cover;
+  background-color:#99d6cf;
+  text-align:center;
+}
+.section-maintitle{
+	display: block;
+	text-align: center;
+	font-size: 50rpx;
+	color: #3e3e3e;
+
+	letter-spacing: 10rpx;
+	padding-top: 40rpx;
+}
+.section-subtitle{
+	display: block;
+	text-align: center;
+	font-size: 26rpx;
+	color: #3e3e3e;
+padding:0 1.2em;
+	letter-spacing: 10rpx;
+}
+/*.active .section-maintitle,
+.active .section-subtitle{
+	animation: mymove 0.8s;
+}*/
+@keyframes mymove{
+	from {
+		transform: translateY(-400rpx) scale(0.5) rotateY(90deg);
+	}
+	to {
+		transform: translateY(0) scale(1) rotateY(0);
+	}
+}

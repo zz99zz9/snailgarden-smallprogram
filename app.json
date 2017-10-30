@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+        "pages/garden/garden",
+     
+        "pages/book/book",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#99d6cf",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#3e3e3e"
+  }
+}

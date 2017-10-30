@@ -1,0 +1,7 @@
+/* pages/book/book.wxss */
+.container{background:#99d6cf;background-image:url('https://snailgarden.shxgwl.com/xgwl/img/bg.jpg');background-size:cover;}
+.h1{font-size:20px;}
+.book{padding:20px;padding-top:60px;}
+.line{margin-top:30px;width:200px;display:block;margin:30px auto;}
+.line input{border:1px solid #fff;padding-left:5px;}
+.line button{font-size:1em;}

@@ -1,0 +1,124 @@
+<view class="container container-fill">
+	<view class="scroll-fullpage" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="transform:translateY(-{{scrollindex*100}}%);margin-top: {{margintop}}px">
+
+		<view class="section section01 {{scrollindex==0?'active':''}}">
+      <image src="../../dist/img/logo.png" class='logo' mode='widthFix'></image>
+      <image src='../../dist/img/arr-down.png' class='down' mode='widthFix'></image>
+		</view>
+		<view class="section section02 {{scrollindex==1?'active':''}}" >
+			<text class="section-maintitle">花园特征</text>
+      <image src="../../dist/img/titline.png" class="titline"></image>
+      <text class="section-subtitle">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+      <image src="../../dist/img/pages1.png" mode="widthFix" class="page1img"></image>
+		</view>
+  		<view class="section section03 {{scrollindex==2?'active':''}}" >
+      <text class="section-maintitle2">花园泥作及维护</text>
+
+      <text class="section-subtitle2">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+		</view>
+  	<view class="section section04 {{scrollindex==3?'active':''}}" >
+      <text class="section-maintitle3">花园木作及维护</text>
+
+      <text class="section-subtitle3">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+		</view>
+<!--花园水电及维护-->
+  	<view class="section section05 {{scrollindex==4?'active':''}}" >
+      <text class="section-maintitle">花园水电及维护</text>
+      <image src="../../dist/img/titline.png" class="titline"></image>
+      <text class="section-subtitle">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+        <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+          <block wx:for="{{hysd}}" wx:key="index">
+            <swiper-item>
+              <div class="slide-image"><image src="{{item.url}}" class="image" mode="aspectFill"/><p>{{item.tit}}</p></div>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+<!--花园小品-->
+      	<view class="section section06 {{scrollindex==5?'active':''}}" >
+      <text class="section-maintitle">花园小品</text>
+      <image src="../../dist/img/titline.png" class="titline"></image>
+      <text class="section-subtitle">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+        <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+         <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+          <block wx:for="{{hyxp}}" wx:key="index">
+            <swiper-item>
+              <div class="slide-image2"><image src="{{item.url}}" mode="aspectFill" class="image"/><p>{{item.tit}}</p></div>
+            </swiper-item>
+          </block>
+        </swiper> 
+
+    </view>
+    <!--花园乔木-->
+      	<view class="section section07 {{scrollindex==6?'active':''}}" >
+      <text class="section-maintitle">花园乔木</text>
+      <image src="../../dist/img/titline.png" class="titline"></image>
+      <text class="section-subtitle">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+        <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+          <block wx:for="{{hyqm}}" wx:key="index">
+            <swiper-item>
+              <div class="slide-image2"><image src="{{item.url}}" mode="aspectFill" class="image"/><p>{{item.tit}}</p></div>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    <!--花园灌木-->
+    <view class="section section08 {{scrollindex==7?'active':''}}" >
+      <text class="section-maintitle">花园灌木</text>
+      <image src="../../dist/img/titline.png" class="titline"></image>
+      <text class="section-subtitle">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+        <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+          <block wx:for="{{hygm}}" wx:key="index">
+            <swiper-item>
+              <div class="slide-image2"><image src="{{item.url}}" mode="aspectFill" class="image"/><p>{{item.tit}}</p></div>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    <!--花园花境-->
+    <view class="section section09 {{scrollindex==8?'active':''}}" >
+      <text class="section-maintitle">花园花境</text>
+      <image src="../../dist/img/titline.png" class="titline"></image>
+      <text class="section-subtitle">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+        <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+          <block wx:for="{{hyhj}}" wx:key="index">
+            <swiper-item>
+              <div class="slide-image2"><image src="{{item.url}}" mode="aspectFill" class="image"/><p>{{item.tit}}</p></div>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    <!--花园花絮-->
+    <view class="section section10 {{scrollindex==10?'active':''}}" >
+      <text class="section-maintitle">花园花絮</text>
+      <image src="../../dist/img/titline.png" class="titline"></image>
+      <text class="section-subtitle">花园设计方案根据花园所在位置、风格等因素的不同，会有不同设计方案，如屋顶花园、别墅花园、空中花园设计方案等。</text>
+        <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+          <block wx:for="{{hyhx}}" wx:key="index">
+            <swiper-item>
+              <div class="slide-image2"><image src="{{item.url}}" mode="aspectFill" class="image"/><p>{{item.tit}}</p></div>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+
+        <!--页底-->
+    <view class="section section11 {{scrollindex==11?'active':''}}" >
+    <div class="eq">
+      <image src="../../dist/img/eq.png" mode='widthFix' class="image"></image>
+      <text class="tit">蜗牛妈妈的生活</text>
+      </div>
+      <a href="tel:40088008888" class="tel">Tel 400 8800 8888</a>
+      <div class="h20"></div>
+      <text class="section-subtitle">电子邮件：SnailGarden@163.com </text>
+ <text class="section-subtitle">地址：上海市浦东区民生路200号4号楼312室</text>
+
+    </view>
+    
+	</view>
+</view>
