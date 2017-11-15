@@ -56,6 +56,6 @@ Page({
       hasUserInfo: true
     })
     console.log(app.globalData.userInfo);
-    console.log(app.globalData.signature);
+    console.log(app.globalData);
   }
 })
