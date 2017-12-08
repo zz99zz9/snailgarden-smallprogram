@@ -8,7 +8,7 @@
 
     </block>
   </view>
-  <navigator class="btn" url="../../pages/garden/garden">
+  <navigator wx:if="{{hasUserInfo && canIUse}}" class="btn" url="../../pages/garden/garden">
     <button >进入我的花园</button>
   </navigator>
 </view>

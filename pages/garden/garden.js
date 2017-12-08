@@ -67,8 +67,8 @@ Page({
       success: function (res) {
         // success
 
-      //  console.log("返回数据为：" + res.data);
-      //  console.log('submit success');
+        console.log("返回数据为：" + res.data);
+
       },
       fail: function () {
         // fail
@@ -76,7 +76,7 @@ Page({
       },
       complete: function () {
         // complete
-        console.log('submit comlete');
+
       }
     })
     //post end

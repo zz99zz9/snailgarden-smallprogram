@@ -7,6 +7,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
+
   },
   //事件处理函数
   bindViewTap: function() {
@@ -16,13 +17,14 @@ Page({
     
   },
   onLoad: function () {
-    
+    var signature = wx.getStorageSync('signature');
+    var userinfo = wx.getStorageSync('userinfo');
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-      console.log(app.globalData.signature);
+
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
@@ -31,8 +33,9 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
-        console.log(app.globalData.userInfo);
+
       }
+      
 
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -44,10 +47,12 @@ Page({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
+ 
         }
       })
     }
-    console.log(app.globalData.userInfo);
+  //  console.log("userinfo:" + userinfo);
+  //  console.log("signature:" + signature);
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
@@ -55,7 +60,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-    console.log(app.globalData.userInfo);
-    console.log(app.globalData);
+    
+  //  console.log(app.globalData.userInfo);
+  //  console.log(wx.getStorageSync('user'));
+
   }
 })
