@@ -7,9 +7,10 @@ Page({
     endy: 0, //结束的位置y
     critical: 100, //触发翻页的临界值
     margintop: 0,  //滑动下拉距离
+ 
     //花园水电
     hysd: [
-      { url: 'https://snailgarden.shxgwl.com/xgwl/img/page4-1.gif' ,tit:'总坚向排水图'},
+      { url: 'http://localhost/xgwl/img/page4-1.gif' ,tit:'总坚向排水图'},
       { url: 'https://snailgarden.shxgwl.com/xgwl/img/page4-2.gif', tit: '总坚向排电图'}
     ],
     //花园小品
@@ -55,10 +56,13 @@ Page({
    // console.log(wx.getStorageSync('userinfo'));
     var signature=wx.getStorageSync('signature');
     var userinfo = wx.getStorageSync('userinfo');
+    var du ='http://localhost';
    // console.log(signature);
     //post start
     wx.request({
-      url: 'https://snailgarden.shxgwl.com/',
+      //https://snailgarden.shxgwl.com
+
+      url: du+'/api/userinfo.asp',
       data: Util.json2Form({ opid: signature, userinfo: userinfo}),
       method: 'post', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       header: { "Content-Type": "application/x-www-form-urlencoded" },

@@ -1,0 +1,20 @@
+<!--pages/bookok/bookok.wxml-->
+<view class="container">
+  <view class="bookok">
+  <view class="userinfo">
+<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+<view class="h1">
+您的信息我们已经收到
+</view>
+<view class="h1">我们将尽快和您联系！</view>
+<view class="h1">
+蜗牛热线
+</view>
+<view class="h1">
+400-880-8888
+</view>
+  </view>
+
+</view>

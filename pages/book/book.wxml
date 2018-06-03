@@ -6,18 +6,18 @@
     <text class="h1">您还没有建造自己的花园，现在预约，我们将尽快跟您联系^_^</text>
       <view style="display:flex;" class="line">
         <label>姓名：</label>
-        <input name="userName" placeholder="请输入您的真实姓名！" />
+        <input name="username" placeholder="请输入您的真实姓名！" />
       </view>
       <view style="display:flex;" class="line">
         <label >电话：</label>
-        <input name="tel" placeholder="请输入您的手机号！" />
+        <input name="tel" placeholder="请输入您的手机号！"  />
       </view>
       
       <view style="display:flex;margin-top:30px;" class="line">
         <button style="width:60%;" formType="submit" >立即预约</button>
       </view>
     </form>
-    <view class="tip">{{tip}}</view>
+    <view class="tip">{{tip}}{{url}}</view>
 
 
   </view>

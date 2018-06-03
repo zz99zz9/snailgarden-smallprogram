@@ -1,4 +1,8 @@
 // pages/book/book.js
+var url = wx.getStorageSync('url');
+var openid= wx.getStorageSync('openid');
+var username,tip,tel,has;
+
 Page({
 
   /**
@@ -64,47 +68,47 @@ Page({
   
   },
   formBindsubmit: function (e) {
-    if (e.detail.value.userName.length == 0 || e.detail.value.tel.length == 0) {
+    if (e.detail.value.username.length == 0 || e.detail.value.tel.length == 0) {
       this.setData({
         tip: '提示：姓名和手机号不能为空！',
-        userName: '',
-        psw: ''
+        username: '',
+        tel: ''
       })
     } else {
       this.setData({
         tip: '',
-        userName: '用户名：' + e.detail.value.userName,
-        psw: '密码：' + e.detail.value.psw
+        username: e.detail.value.username,
+        tel: e.detail.value.tel
+
       })
+      username = e.detail.value.username;
+      tel = e.detail.value.tel;
+console.log(url);
       //post start
       wx.request({
-        url: 'https://snailgarden.shxgwl.com/api/ly.asp',
-        data: Util.json2Form({ userName: userName, psw: psw }),
-        method: 'post', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        header: { "Content-Type": "application/x-www-form-urlencoded" },
-        // header: {'Content-Type': 'application/json'}, // 设置请求的 header
-        // dataType:JSON,//该语句会将服务器端的数据自动转为string类型
+        url: url + 'api/ly.asp',
+        data: Util.json2Form({ openid: openid, username: username, tel: tel }),
+    method: 'post',
+    header: { "Content-Type": "application/x-www-form-urlencoded" },
+
         success: function (res) {
           // success
-          this.setData({
-            tip: '提示：提交成功，我们将尽快和您联系！',
-            userName: '',
-            psw: ''
-          })
-
-          //  console.log("返回数据为：" + res.data);
+      //    console.log(res.data);
           //  console.log('submit success');
-        },
-        fail: function () {
-          // fail
-          //  console.log('submit fail');
-        },
-        complete: function () {
-          // complete
-         // console.log('submit comlete');
+          wx.reLaunch({    
+
+            url: '/pages/bookok/bookok'
+
+          })
         }
+                
       })
     //post end
+
+
+    
     }
   }
 })
+var that;
+var Util = require('../../utils/util.js');

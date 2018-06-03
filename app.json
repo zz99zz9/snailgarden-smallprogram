@@ -1,10 +1,11 @@
 {
   "pages": [
+  
     "pages/index/index",
         "pages/garden/garden",
-     
-        "pages/book/book",
-    "pages/logs/logs"
+     "pages/bookok/bookok",
+    "pages/logs/logs",
+    "pages/book/book"
   ],
   "window": {
     "backgroundTextStyle": "light",
